@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   //GET SELECTORS OF THE BUTTONS
-  const startVideoButton = document.querySelector("#start_video");
-  const stopVideoButton = document.querySelector("#stop_video");
+  const startVideoButton = document.querySelector("#start-button");
+  const stopVideoButton = document.querySelector("#stop-button");
   const audioElement = document.querySelector("input#audio");
   const fullScreenSelect = document.querySelector(".full-screen");
-  const currentTabSelect = document.querySelector(".current-tab");
+  const currentTabSelect = document.querySelector(".current-screen");
   const closePopup = document.querySelector("#close");
   let screen = "browser";
   let hasAudio = true;

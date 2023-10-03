@@ -1,75 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <!-- Meta tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="logo-128x128.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/styles.css">
+    
+    <!-- Shortcut icon -->
+    <link rel="shortcut icon" href="logo-128x128.png" type="image/x-icon" />
+    
+    <!-- External CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    
+    <!-- Title for the webpage -->
     <title>HelpMeOut</title>
-  </head>
-  <body>
-
+</head>
+<body>
+    <!-- Main content container -->
     <div class="content">
+        <!-- Main header section -->
+        <div class="main-header">
+            <!-- Logo header section -->
+            <div class="logo-header">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="./images/logo-128x128.png" alt="Logo" id="logo" />
+                    <h2>HelpMeOut</h2>
+                </div>
+                <!-- Close and settings buttons -->
+                <div class="close">
+                    <!-- Link to an external website (opens in a new tab) -->
+                    <a href="https://landing-page-bolupe.vercel.app/" target="_blank" rel="noopener">
+                        <img src="./images/setting-2.png" alt="Settings" id="settings" />
+                    </a>
+                    <img src="./images/close-circle.png" alt="Close" id="close" />
+                </div>
+            </div>
 
-      <div class="main-header">
-
-        <div class="logo-header">
-          <div class="logo">
-            <img src="./images/logo-128x128.png" alt="Logo" id="logo">
-            <h2>HelpMeOut</h2>
-          </div>
-          <div class="close">
-            <a href="https://landing-page-bolupe.vercel.app/" target="_blank" rel="noopener">
-              <img src="./images/setting-2.png" alt="Settings" id="settings">
-            </a>
-            <img src="./images/close-circle.png" alt="Close" id="close">
-          </div>
+            <!-- Word header -->
+            <div class="word-header">
+                <p>
+                    This extension helps you record and share help videos with ease.
+                </p>
+            </div>
         </div>
 
-        <div class="word-header">
-          <p>This extension helps you record and share help videos with ease.</p>
+        <!-- Screens section -->
+        <div class="screens">
+            <!-- Full-screen option -->
+            <div class="full-screen">
+                <img src="./images/monitor.png" alt="Monitor" id="full_screen-img" />
+                <p>Full Screen</p>
+            </div>
+            <!-- Current Tab option -->
+            <div class="current-screen">
+                <img src="./images/copy.png" alt="Current Tab" id="current_tab-img" />
+                <p>Current Tab</p>
+            </div>
         </div>
 
-      </div>
-
-      <div class="functions">
-        <div class="full-screen">
-          <img src="./images/monitor.png" alt="Monitor" id="full_screen-img">
-          <p>Full Screen</p>
+        <!-- Button container for Camera toggle -->
+        <div class="button-container">
+            <div class="icon-title">
+                <img src="./images/video.png" alt="Camera" id="camera-img" />
+                <p>Camera</p>
+            </div>
+            <!-- Toggle switch for Camera (disabled and checked) -->
+            <label class="switch" for="camera">
+                <input type="checkbox" id="camera" name="camera" checked disabled />
+                <span class="slider round"></span>
+            </label>
         </div>
-        <div class="current-tab">
-          <img src="./images/copy.png" alt="Current Tab" id="current_tab-img">
-          <p>Current Tab</p>
+
+        <!-- Button container for Audio toggle -->
+        <div class="button-container">
+            <div class="icon-title">
+                <img src="./images/microphone.png" alt="Audio" id="audio-img" />
+                <p>Audio</p>
+            </div>
+            <!-- Toggle switch for Audio (checked) -->
+            <label class="switch" for="audio">
+                <input type="checkbox" id="audio" name="audio" checked />
+                <span class="slider round"></span>
+            </label>
         </div>
-      </div>
 
-      <div class="button_cont">
-        <div class="icon-title">
-          <img src="./images/video.png" alt="Camera" id="camera-img">
-          <p>Camera</p>
-        </div>
-        <label class="switch" for="camera">
-          <input type="checkbox" id="camera" name="camera" checked disabled>
-          <span class="slider round"></span>
-        </label>
-      </div>
-
-      <div class="button_cont">
-        <div class="icon-title">
-          <img src="./images/microphone.png" alt="Audio" id="audio-img">
-          <p>Audio</p>
-        </div>
-        <label class="switch" for="audio">
-          <input type="checkbox" id="audio" name="audio" checked>
-          <span class="slider round"></span>
-        </label>
-      </div>
-
-      <button class="recording" id="start_video"><span>Start Recording</span></button>
-      <button class="recording" id="stop_video"><span>Stop Recording</span></button>
-
+        <!-- Start Recording button -->
+        <button class="recording" id="start-button">
+            <span>Start Recording</span>
+        </button>
+        <!-- Stop Recording button -->
+        <button class="recording" id="stop-button">
+            <span>Stop Recording</span>
+        </button>
     </div>
 
+    <!-- External JavaScript file -->
     <script src="./js/popup.js"></script>
-  </body>
+</body>
 </html>

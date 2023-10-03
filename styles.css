@@ -1,13 +1,16 @@
+/* Import fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@700&family=Work+Sans:wght@400;500;600&display=swap');
 
-*{
+/* Reset default styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
 }
 
-.content{
+/* Main content container */
+.content {
     padding: 1.5rem 1.5rem 2rem 1.5rem;
     min-width: 300px;
     display: inline-flex;
@@ -17,7 +20,8 @@
     gap: 1.5rem;
 }
 
-.main-header{
+/* Header section */
+.main-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,58 +30,68 @@
     row-gap: 1rem;
 }
 
-.logo-header{
+/* Logo header */
+.logo-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
 }
 
-.logo{
+/* Logo */
+.logo {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.logo h2{
+/* Logo text */
+.logo h2 {
     font-family: 'Sora', sans-serif;
     font-size: 1rem;
     font-weight: 700;
     color: #120B48;
 }
 
-#logo{
+/* Logo image */
+#logo {
     width: 28px;
 }
 
-.close{
+/* Close button */
+.close {
     display: flex;
     align-items: center;
     gap: 0.75rem;
 }
 
-#settings{
+/* Settings button */
+#settings {
     width: 20px;
     cursor: pointer;
 }
 
-#close{
+/* Close button */
+#close {
     opacity: 0.5;
     cursor: pointer;
     width: 20px;
 }
 
-#close:hover{
+/* Hover effect for close button */
+#close:hover {
     opacity: 1;
 }
 
-.word-header{
-color: #413C6D;
-font-size: 0.875rem;
-font-weight: 400;
+/* Word header */
+.word-header {
+    color: #413C6D;
+    font-size: 0.875rem;
+    font-weight: 400;
 }
 
-.functions{
+/* Screens section */
+.screens {
     display: flex;
     padding: 0rem 2rem;
     justify-content: space-between;
@@ -86,8 +100,9 @@ font-weight: 400;
     margin-top: .5rem;
 }
 
+/* Full-screen and current screen sections */
 .full-screen,
-.current-tab{
+.current-screen {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,57 +111,67 @@ font-weight: 400;
     cursor: pointer;
 }
 
+/* Text within full-screen and current screen sections */
 .full-screen p,
-.current-tab p{
-    color:#120B48;
+.current-screen p {
+    color: #120B48;
     font-size: 0.875rem;
     font-weight: 600;
 }
 
-.full-screen{
+/* Full-screen section (initially with reduced opacity) */
+.full-screen {
     opacity: 0.5;
 }
 
+/* Images for full-screen and current screen sections */
 #full_screen-img,
-#current_tab-img{
+#current_tab-img {
     width: 32px;
 }
 
-.full-screen:hover{
+/* Hover effect for full-screen section */
+.full-screen:hover {
     opacity: 1;
 }
 
-.button_cont {
+/* Button container */
+.button-container {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    border-radius:0.75rem;
+    border-radius: 0.75rem;
     border: 1px solid #100A42;
     padding: 0.75rem 0.75rem 0.75rem 1rem;
 }
 
-.icon-title{
+/* Icon and title within button container */
+.icon-title {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.icon-title p{
+/* Text within icon and title */
+.icon-title p {
     color: #100A42;
     font-size: 0.875rem;
     font-weight: 500;
 }
 
-#camera-img{
+/* Camera icon image */
+#camera-img {
     width: 24px;
 }
 
-#audio-img{
+/* Audio icon image */
+#audio-img {
     height: 24px;
 }
 
-.recording{
+/* Recording section */
+.recording {
     width: 100%;
     padding: 1rem;
     gap: 0.5rem;
@@ -155,30 +180,30 @@ font-weight: 400;
     border: none;
 }
 
-.recording span{
+/* Text within recording section */
+.recording span {
     color: #FAFDFF;
     font-size: 1rem;
     font-weight: 500;
 }
 
-/* #stop_video{
-    display: none;
-} */
-
+/* Toggle switch */
 .switch {
     position: relative;
     display: inline-block;
     width: 2.25rem;
     height: 1.25rem;
-  }
-  
-  .switch input { 
+}
+
+/* Hide the actual input */
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  .slider {
+}
+
+/* Slider for the toggle switch */
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -186,11 +211,11 @@ font-weight: 400;
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  .slider:before {
+}
+
+/* Slider knob */
+.slider:before {
     position: absolute;
     content: "";
     width: 1rem;
@@ -198,41 +223,30 @@ font-weight: 400;
     left: 0.12rem;
     bottom: 0.12rem;
     background-color: white;
-    -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #120B48;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #120B48;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(1rem);
-    -ms-transform: translateX(1rem);
-    transform: translateX(1rem);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 0.75rem;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
-
-/* .button_cont button{
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    background: blue;
-    color: white;
 }
 
-.button_cont:hover{
-    box-shadow: 1px 0 10px #eee;
-} */
+/* Styling for checked (on) state of the toggle switch */
+input:checked + .slider {
+    background-color: #120B48;
+}
+
+/* Styling for focus state of the toggle switch */
+input:focus + .slider {
+    box-shadow: 0 0 1px #120B48;
+}
+
+/* Move the slider knob to the right for the checked (on) state */
+input:checked + .slider:before {
+    transform: translateX(1rem);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 0.75rem;
+}
+
+/* Rounded knob for rounded sliders */
+.slider.round:before {
+    border-radius: 50%;
+}
